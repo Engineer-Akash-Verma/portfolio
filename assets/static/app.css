@@ -272,10 +272,22 @@ ul {
   padding: 7rem 0 4rem;
 }
 
-#hero-canvas {
+/* Animated ambient gradient — replaces Three.js canvas */
+#hero::after {
+  content: '';
   position: absolute;
   inset: 0;
   z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 15% 40%, rgba(0,212,255,0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 45% at 85% 65%, rgba(124,58,237,0.07) 0%, transparent 65%);
+  animation: heroBgPulse 9s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes heroBgPulse {
+  0%   { opacity: 0.5; }
+  100% { opacity: 1;   }
 }
 
 .hero-content {
@@ -291,6 +303,28 @@ ul {
   text-align: left;
 }
 
+/* ── Hero entrance — pure CSS (no GSAP) ───────────────────── */
+.hero-greeting,
+.hero-name,
+.hero-typed-wrapper,
+.hero-desc,
+.hero-actions,
+.hero-visual {
+  animation: heroIn 0.65s ease forwards;
+  opacity: 0;
+}
+.hero-greeting      { animation-delay: 0.15s; }
+.hero-name          { animation-delay: 0.35s; }
+.hero-typed-wrapper { animation-delay: 0.55s; }
+.hero-desc          { animation-delay: 0.7s;  }
+.hero-actions       { animation-delay: 0.85s; }
+.hero-visual        { animation-delay: 0.25s; }
+
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+
 .hero-greeting {
   font-size: 1rem;
   font-weight: 500;
@@ -298,7 +332,6 @@ ul {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
-  opacity: 0;
 }
 
 .hero-name {
@@ -309,7 +342,6 @@ ul {
   letter-spacing: -0.03em;
   color: var(--text-primary);
   margin-bottom: 1rem;
-  opacity: 0;
 }
 
 .hero-name .highlight {
@@ -323,7 +355,6 @@ ul {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   color: var(--text-secondary);
   margin-bottom: 1.75rem;
-  opacity: 0;
   min-height: 2rem;
 }
 
@@ -341,7 +372,6 @@ ul {
   color: var(--text-secondary);
   max-width: 440px;
   margin-bottom: 2.25rem;
-  opacity: 0;
   line-height: 1.8;
 }
 
@@ -349,7 +379,6 @@ ul {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  opacity: 0;
 }
 
 .btn-primary {
@@ -397,7 +426,6 @@ ul {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  opacity: 0;
 }
 
 .profile-ring-wrap {
@@ -700,12 +728,15 @@ ul {
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.75rem;
 }
 
 .project-card {
+  flex: 0 1 350px;
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -944,25 +975,78 @@ footer a:hover {
   background: var(--accent-gold);
 }
 
-/* ── AOS-style classes driven by GSAP ────────────────────── */
+/* ── IO-driven scroll reveals (replaces GSAP ScrollTrigger) ─ */
 .gsap-fade-up {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.gsap-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .gsap-fade-left {
   opacity: 0;
-  transform: translateX(-40px);
+  transform: translateX(-28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.gsap-fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .gsap-fade-right {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.gsap-fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .gsap-zoom-in {
   opacity: 0;
-  transform: scale(0.88);
+  transform: scale(0.9) translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.gsap-zoom-in.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Timeline items */
+.timeline-item {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Education card */
+.edu-card {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.edu-card.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Skill category titles */
+.skill-cat-title {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.skill-cat-title.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* ── Mobile Nav ───────────────────────────────────────────── */

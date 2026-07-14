@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon.png" />
+  <title>Akash Verma | 100x Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="assets/static/app.css" />
+
+  <style>
+    /* A little extra flair for the funny page */
+    .meme-badge {
+      background: linear-gradient(135deg, #f43f5e, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+
+    .hire-me-pls {
+      font-size: 2rem;
+      animation: pulse 1s infinite alternate;
+      color: var(--accent-gold);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.05);
+      }
+    }
+
+    .serious-mode {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background: #f43f5e;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(244, 63, 94, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="index.html" class="serious-mode"><i class="fa-solid fa-user-tie"></i> Back to Boring Serious Mode</a>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="scrolled">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">Wait, you're still reading?</a>
+        <ul class="nav-links">
+          <li><a class="nav-cta" href="#hire" style="background: var(--accent-gold); color: black;">Just Hire Me
+              Already</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">🚨 ALERT: RARE DEVELOPER DETECTED 🚨</p>
+          <h1 class="hero-name">I am <span class="highlight">Akash Verma</span></h1>
+          <div class="hero-typed-wrapper">
+            <span id="typed-text-funny" style="color:var(--accent-gold); font-weight:bold;">Professional StackOverflow
+              Copy-Paster</span>
+          </div>
+          <p class="hero-desc">
+            I turn coffee into code, bugs into "undocumented features," and your broken deployment into my personal
+            weekend tragedy.
+            I know <strong>.NET</strong>, I can center a `div` in CSS, and my parents think I'm a hacker because I use
+            Dark Mode.
+          </p>
+          <div class="hero-actions">
+            <a href="#hire" class="btn-primary">Hire me (I need to buy a yacht)</a>
+            <a href="https://github.com/Engineer-Akash-Verma" class="btn-secondary" target="_blank">Look at my messy
+              code</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-ring-wrap" style="width: 300px; height: 300px;">
+            <div class="profile-ring" style="animation-duration: 2s;"></div>
+            <img src="assets/img/ProfileImage.jpg" alt="Akash Verma"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 2; position: relative;">
+          </div>
+          <p class="meme-badge">👆 Look at this highly hirable face 👆</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / STATS -->
+  <section id="about" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">The <span>Cold, Hard Facts</span></h2>
+      </div>
+
+      <div class="about-stats" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="glass-card stat-card">
+          <div class="stat-number">10,000+</div>
+          <div class="stat-label">Google Searches for Syntax</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-number">404</div>
+          <div class="stat-label">Motivation Not Found</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-number">99%</div>
+          <div class="stat-label">Confidence It Will Work (It didn't)</div>
+        </div>
+        <div class="glass-card stat-card">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Production Database Dropped (Just kidding... maybe)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Actual <span>Skills</span> (Not Lying)</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap" style="background:rgba(227, 76, 38, 0.2); color:#e34c26"><i
+              class="fa-brands fa-stack-overflow"></i></div>
+          <div class="skill-name">Ctrl+C / Ctrl+V</div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap" style="background:rgba(240, 219, 79, 0.2); color:#f0db4f"><i
+              class="fa-solid fa-mug-hot"></i></div>
+          <div class="skill-name">Coffee Consumption</div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap" style="background:rgba(102, 16, 242, 0.2); color:#7952b3"><i
+              class="fa-solid fa-power-off"></i></div>
+          <div class="skill-name">Turning it Off & On</div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap" style="background:rgba(16, 185, 129, 0.2); color:#10b981"><i
+              class="fa-solid fa-bug"></i></div>
+          <div class="skill-name">Blaming the Compiler</div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap" style="background:rgba(255, 140, 0, 0.2); color:#ff8c00"><i
+              class="fa-brands fa-git-alt"></i></div>
+          <div class="skill-name">Git Push --force</div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap" style="background:rgba(0, 120, 212, 0.2); color:#0078d4"><i
+              class="fa-solid fa-book-open"></i></div>
+          <div class="skill-name">Reading Docs (When Desperate)</div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap" style="background:rgba(90, 94, 246, 0.2); color:#7b83ff"><i
+              class="fa-solid fa-face-smile-wink"></i></div>
+          <div class="skill-name">Nodding in Meetings</div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap" style="background:rgba(150, 0, 220, 0.2); color:#9600dc"><i
+              class="fa-solid fa-desktop"></i></div>
+          <div class="skill-name">Staring at Screen Intently</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" style="padding-bottom: 5rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My "Professional" <span>Journey</span></h2>
+      </div>
+
+      <div class="timeline" style="max-width: 800px; margin: auto;">
+
+        <div class="timeline-item glass-card" style="margin-bottom: 2rem;">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content" style="padding: 2rem;">
+            <h3>Intelliflo (Senior Developer)</h3>
+            <span class="timeline-date">Nov 2023 - Present</span>
+            <p style="margin-top: 1rem; color: var(--text-secondary)">
+              Currently pretending to know what Kubernetes is. I nod thoughtfully in architecture meetings and say
+              things like "But does it scale?" or "Let's microservice that." They still haven't figured out my secret.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card" style="margin-bottom: 2rem;">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content" style="padding: 2rem;">
+            <h3>Publix Super Markets (Software Engineer)</h3>
+            <span class="timeline-date">Feb 2021 - Sep 2023</span>
+            <p style="margin-top: 1rem; color: var(--text-secondary)">
+              Built retail software. Did you know grocery stores have software? Well they do, and I wrote it in Angular.
+              Fixed a bug once that accidentally made avocados free. (Okay, that's a lie, but it sounds cool).
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" style="padding-bottom: 5rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">"Groundbreaking" <span>Projects</span></h2>
+      </div>
+
+      <div class="projects-grid" style="display:flex; flex-wrap:wrap; gap:1.75rem; justify-content:center;">
+        
+        <article class="glass-card project-card" style="flex:0 1 350px; padding: 2rem;">
+          <div style="font-size: 2.5rem; color: var(--accent-cyan); margin-bottom: 1rem;"><i class="fa-solid fa-list-check"></i></div>
+          <h3 style="margin-bottom: 1rem;">A To-Do App</h3>
+          <p style="color: var(--text-secondary);">
+            I built a To-Do app to manage my life. It currently has 400 unfinished tasks, including 'finish this to-do app'. 
+            It has dark mode though, so it's enterprise-ready.
+          </p>
+        </article>
+
+        <article class="glass-card project-card" style="flex:0 1 350px; padding: 2rem;">
+          <div style="font-size: 2.5rem; color: var(--accent-violet); margin-bottom: 1rem;"><i class="fa-solid fa-server"></i></div>
+          <h3 style="margin-bottom: 1rem;">Localhost:5000</h3>
+          <p style="color: var(--text-secondary);">
+            My magnum opus. It works perfectly on my machine. It's beautiful. It's flawless. If it breaks in production, that's a DevOps problem, not mine.
+          </p>
+        </article>
+
+        <article class="glass-card project-card" style="flex:0 1 350px; padding: 2rem;">
+          <div style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem;"><i class="fa-solid fa-folder-open"></i></div>
+          <h3 style="margin-bottom: 1rem;">Untitled Folder 4</h3>
+          <p style="color: var(--text-secondary);">
+            A revolutionary project containing files named 'final.js', 'final_real.js', 'please_work_god.js', and 'asdf.js'. 
+            I'm too afraid to delete any of them.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" style="padding-bottom: 5rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Raving <span>Reviews</span></h2>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
+        <div class="glass-card" style="padding:2rem; max-width: 350px; text-align:center;">
+          <div style="font-size:1.5rem; color:var(--accent-gold); margin-bottom:1rem;">★★★★★</div>
+          <p style="font-style:italic; margin-bottom:1rem; color:var(--text-secondary);">"He is definitely my son. I think he fixes computers?"</p>
+          <strong style="color:var(--text-primary);">— Mom</strong>
+        </div>
+        
+        <div class="glass-card" style="padding:2rem; max-width: 350px; text-align:center;">
+          <div style="font-size:1.5rem; color:var(--accent-gold); margin-bottom:1rem;">★★★★☆</div>
+          <p style="font-style:italic; margin-bottom:1rem; color:var(--text-secondary);">"Why does everything on this page say 'Hello World'?"</p>
+          <strong style="color:var(--text-primary);">— Confused Client</strong>
+        </div>
+
+        <div class="glass-card" style="padding:2rem; max-width: 350px; text-align:center;">
+          <div style="font-size:1.5rem; color:var(--accent-gold); margin-bottom:1rem;">★☆☆☆☆</div>
+          <p style="font-style:italic; margin-bottom:1rem; color:var(--text-secondary);">"Who pushed directly to master?! Akash!!!"</p>
+          <strong style="color:var(--text-primary);">— Former Team Lead</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="hire" style="text-align: center; padding: 5rem 0; border-top: 1px solid var(--border-glass);">
+    <div class="container">
+      <h2 class="hire-me-pls">Please Hire Me. I have mechanical keyboards to feed.</h2>
+      <p style="margin: 2rem 0; color: var(--text-secondary); max-width: 600px; margin-inline: auto;">
+        Look, you read this far. You're smiling (or judging me severely). Either way, I'm memorable. Let's write some
+        awesome code together.
+      </p>
+      <a href="mailto:engineer.akash.verma@gmail.com" class="btn-primary"
+        style="font-size: 1.2rem; padding: 1rem 3rem;">Email Me Before Someone Else Does</a>
+    </div>
+  </section>
+
+</body>
+
+</html>
