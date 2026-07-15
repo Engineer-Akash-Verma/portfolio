@@ -1,9 +1,9 @@
-(function() {
+(function () {
   const canvas = document.getElementById('bg-canvas');
   if (!canvas) return;
 
   const ctx = canvas.getContext('2d', { alpha: false });
-  
+
   // Style the canvas to be fixed behind everything
   canvas.style.position = 'fixed';
   canvas.style.top = '0';
@@ -15,7 +15,7 @@
 
   let width, height;
   let particles = [];
-  
+
   // Premium, ultra-minimalist configuration
   const config = {
     particleCount: window.innerWidth < 600 ? 40 : 80,
@@ -57,7 +57,7 @@
     height = canvas.height = window.innerHeight;
     config.particleCount = width < 600 ? 40 : 100;
   }
-  
+
   window.addEventListener('resize', () => {
     resize();
     initParticles();
@@ -88,7 +88,7 @@
         let dx = mouse.x - this.x;
         let dy = mouse.y - this.y;
         let dist = Math.sqrt(dx * dx + dy * dy);
-        
+
         if (dist < 100) {
           const force = (100 - dist) / 100;
           this.x -= (dx / dist) * force * 0.5;
@@ -114,7 +114,7 @@
 
   function drawLines() {
     ctx.lineWidth = 0.5;
-    
+
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         let dx = particles[i].x - particles[j].x;

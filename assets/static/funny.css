@@ -51,7 +51,7 @@
 /* Extracted inline styles */
 .funny-nav-cta {
   background: var(--accent-gold);
-  color: black;
+  color: var(--bg-primary);
 }
 
 .typed-text-funny {

@@ -18,15 +18,9 @@
     }
     localStorage.setItem('theme', theme);
     
-    // Update toggle icons if they are loaded
-    document.querySelectorAll('.theme-toggle i').forEach(icon => {
-      if (theme === 'light') {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-      } else {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-      }
+    // Update toggle switch states
+    document.querySelectorAll('.theme-toggle-checkbox').forEach(checkbox => {
+      checkbox.checked = theme === 'light';
     });
   };
 
@@ -38,10 +32,9 @@
     // Re-apply to make sure icons are updated once DOM is ready
     setTheme(getPreferredTheme());
 
-    document.querySelectorAll('.theme-toggle').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-        setTheme(currentTheme === 'light' ? 'dark' : 'light');
+    document.querySelectorAll('.theme-toggle-checkbox').forEach(checkbox => {
+      checkbox.addEventListener('change', (e) => {
+        setTheme(e.target.checked ? 'light' : 'dark');
       });
     });
   });
