@@ -65,14 +65,13 @@
 </head>
 
 <body>
-
-  <!-- ════════════════════════════════════════════════════
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>  <!-- ════════════════════════════════════════════════════
          NAVBAR
     ════════════════════════════════════════════════════ -->
   <nav id="navbar" aria-label="Main navigation">
     <div class="container">
       <div class="nav-inner">
-        <a href="#hero" class="nav-logo" aria-label="Akash Verma Home">&lt;AV /&gt;</a>
+        <a href="#hero" class="nav-logo" aria-label="Akash Verma Home">&lt;AV/&gt;</a>
         <ul class="nav-links" id="nav-links" role="menubar">
           <li role="none"><a class="nav-link" href="#about" data-section="about" role="menuitem">About</a></li>
           <li role="none"><a class="nav-link" href="#experience" data-section="experience"
@@ -96,12 +95,6 @@
          HERO
     ════════════════════════════════════════════════════ -->
   <section id="hero" aria-label="Hero section">
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
-
-    <!-- Ambient glow orbs -->
-    <div class="glow-orb orb-cyan" style="width:420px;height:420px;top:8%;left:2%;"></div>
-    <div class="glow-orb orb-violet" style="width:520px;height:520px;top:25%;right:-8%;"></div>
-    <div class="glow-orb orb-gold" style="width:260px;height:260px;bottom:8%;left:28%;opacity:0.14;"></div>
 
     <div class="container">
       <div class="hero-content">
@@ -152,13 +145,7 @@
             </a>
           </div>
         </div>
-
       </div>
-    </div>
-
-    <div class="hero-scroll" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="scroll-dot"></div>
     </div>
   </section>
 
@@ -497,7 +484,7 @@
 
         <!-- Intelligent Office (iO) -->
         <article class="glass-card project-card gsap-fade-up" data-tilt>
-          <div class="project-thumb" style="background: linear-gradient(135deg, #0d1b2a 0%, #0a2147 100%);">
+          <div class="project-thumb" style="background: rgba(255, 255, 255, 0.03);">
             <img src="https://office.gb.intelliflo.net/ui-io/images/landing/intelliflo-connect-logo.png"
               alt="Intelligent Office by Intelliflo"
               style="max-width:70%;max-height:110px;object-fit:contain;margin:auto;display:block;" loading="lazy" />
@@ -532,8 +519,7 @@
 
         <!-- Publix Platform -->
         <article class="glass-card project-card gsap-fade-up" data-tilt>
-          <div class="project-thumb"
-            style="background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);">
+          <div class="project-thumb" style="background: rgba(255, 255, 255, 0.03);">
             <div class="project-thumb-placeholder">
               <i class="fa-solid fa-store" style="color:var(--accent-cyan)"></i>
               <span>Publix Platform</span>
@@ -568,7 +554,7 @@
 
         <!-- Analog Devices via Infosys -->
         <article class="glass-card project-card gsap-fade-up" data-tilt>
-          <div class="project-thumb" style="background: linear-gradient(135deg, #1a0533 0%, #2d1065 100%);">
+          <div class="project-thumb" style="background: rgba(255, 255, 255, 0.03);">
             <div class="project-thumb-placeholder">
               <i class="fa-solid fa-microchip" style="color:var(--accent-violet)"></i>
               <span>Analog Devices via Infosys</span>
@@ -637,32 +623,6 @@
   </section>
 
   <!-- ════════════════════════════════════════════════════
-         EDUCATION
-    ════════════════════════════════════════════════════ -->
-  <section id="education" aria-label="Education">
-    <div class="container">
-      <div class="section-header gsap-fade-up">
-        <span class="section-tag">Academic Background</span>
-        <h2 class="section-title">My <span>Education</span></h2>
-      </div>
-
-      <div class="glass-card edu-card gsap-zoom-in">
-        <div class="edu-icon">
-          <i class="fa-solid fa-graduation-cap"></i>
-        </div>
-        <div>
-          <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
-          <div class="edu-institution">Himachal Pradesh University, Shimla</div>
-          <div class="edu-year">
-            <i class="fa-regular fa-calendar fa-xs"></i>
-            2018 – 2021
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════════════════════
          CONTACT
     ════════════════════════════════════════════════════ -->
   <section id="contact" aria-label="Contact">
@@ -718,7 +678,8 @@
   <footer>
     <div class="container">
       <p style="margin-bottom: 1.5rem;">
-        <a href="funny.html" style="background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet)); color: white; padding: 0.5rem 1.25rem; border-radius: 50px; font-weight: bold; font-size: 0.9rem; text-decoration: none; box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);">
+        <a href="funny.html"
+          style="display: inline-block; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-primary); padding: 0.6rem 1.4rem; border-radius: 50px; font-weight: 500; font-size: 0.9rem; text-decoration: none; transition: all 0.3s ease;">
           🤪 Bored? Click here for the "Honest" Version
         </a>
       </p>
@@ -735,6 +696,8 @@
     ════════════════════════════════════════════════════ -->
   <!-- Typed.js -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- Background Animation -->
+  <script src="assets/static/bg.js"></script>
   <!-- App Script -->
   <script src="assets/static/app.js"></script>
 </body>

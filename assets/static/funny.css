@@ -1,0 +1,92 @@
+/* A little extra flair for the funny page */
+.meme-badge {
+  background: linear-gradient(135deg, #f43f5e, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.hire-me-pls {
+  font-size: 2rem;
+  animation: pulse 1s infinite alternate;
+  color: var(--accent-gold);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+.serious-mode {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: #f43f5e;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.4);
+}
+
+.funny-stats { grid-template-columns: repeat(4, 1fr); }
+
+.testimonials-grid {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 2rem; 
+  justify-content: center;
+}
+
+/* Extracted inline styles */
+.funny-nav-cta { background: var(--accent-gold); color: black; }
+.typed-text-funny { color: var(--accent-gold); font-weight: bold; }
+.funny-profile-wrap { width: 300px; height: 300px; }
+.funny-profile-ring { animation-duration: 2s; }
+.funny-profile-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 2; position: relative; }
+.funny-timeline { max-width: 800px; margin: auto; }
+.funny-timeline-item { margin-bottom: 2rem; }
+.funny-timeline-content { padding: 2rem; }
+.funny-timeline-text { margin-top: 1rem; color: var(--text-secondary); }
+.funny-project-card { flex: 0 1 350px; padding: 2rem; }
+.funny-project-icon-cyan { font-size: 2.5rem; color: var(--accent-cyan); margin-bottom: 1rem; }
+.funny-project-icon-violet { font-size: 2.5rem; color: var(--accent-violet); margin-bottom: 1rem; }
+.funny-project-icon-gold { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem; }
+.funny-project-title { margin-bottom: 1rem; }
+.funny-text-sec { color: var(--text-secondary); }
+.funny-testimonial-card { padding: 2rem; max-width: 350px; text-align: center; }
+.funny-rating { font-size: 1.5rem; color: var(--accent-gold); margin-bottom: 1rem; }
+.funny-quote { font-style: italic; margin-bottom: 1rem; color: var(--text-secondary); }
+.funny-author { color: var(--text-primary); }
+.funny-hire-section { text-align: center; padding: 7rem 0; border-top: 1px solid var(--border-glass); }
+.funny-hire-desc { margin: 2rem 0; color: var(--text-secondary); max-width: 600px; margin-inline: auto; }
+.funny-hire-btn { font-size: 1.2rem; padding: 1rem 3rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .funny-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  #hero { padding-top: 180px; }
+  .funny-stats { grid-template-columns: 1fr; }
+  .nav-inner { flex-direction: column; gap: 15px; text-align: center; }
+  #navbar .nav-links {
+    position: static;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+  #navbar .nav-cta { margin-top: 0; }
+  .hero-greeting { text-align: center; }
+  .hero-name { font-size: 2.2rem; text-align: center; }
+  .hero-typed-wrapper { text-align: center; }
+  .hire-me-pls { font-size: 1.5rem; }
+  .meme-badge { font-size: 1rem; text-align: center; }
+  .serious-mode { font-size: 0.8rem; padding: 8px 15px; bottom: 15px; right: 15px; }
+}

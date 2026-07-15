@@ -19,45 +19,7 @@
   <!-- App CSS -->
   <link rel="stylesheet" href="assets/static/app.css" />
 
-  <style>
-    /* A little extra flair for the funny page */
-    .meme-badge {
-      background: linear-gradient(135deg, #f43f5e, #fbbf24);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 900;
-      font-size: 1.2rem;
-    }
-
-    .hire-me-pls {
-      font-size: 2rem;
-      animation: pulse 1s infinite alternate;
-      color: var(--accent-gold);
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-
-      100% {
-        transform: scale(1.05);
-      }
-    }
-
-    .serious-mode {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-      background: #f43f5e;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      box-shadow: 0 4px 15px rgba(244, 63, 94, 0.4);
-    }
-  </style>
+  <link rel="stylesheet" href="assets/static/funny.css" />
 </head>
 
 <body>
@@ -70,7 +32,7 @@
       <div class="nav-inner">
         <a href="#hero" class="nav-logo">Wait, you're still reading?</a>
         <ul class="nav-links">
-          <li><a class="nav-cta" href="#hire" style="background: var(--accent-gold); color: black;">Just Hire Me
+          <li><a class="nav-cta funny-nav-cta" href="#hire">Just Hire Me
               Already</a></li>
         </ul>
       </div>
@@ -85,7 +47,7 @@
           <p class="hero-greeting">🚨 ALERT: RARE DEVELOPER DETECTED 🚨</p>
           <h1 class="hero-name">I am <span class="highlight">Akash Verma</span></h1>
           <div class="hero-typed-wrapper">
-            <span id="typed-text-funny" style="color:var(--accent-gold); font-weight:bold;">Professional StackOverflow
+            <span id="typed-text-funny" class="typed-text-funny">Professional StackOverflow
               Copy-Paster</span>
           </div>
           <p class="hero-desc">
@@ -102,10 +64,9 @@
         </div>
 
         <div class="hero-visual">
-          <div class="profile-ring-wrap" style="width: 300px; height: 300px;">
-            <div class="profile-ring" style="animation-duration: 2s;"></div>
-            <img src="assets/img/ProfileImage.jpg" alt="Akash Verma"
-              style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 2; position: relative;">
+          <div class="profile-ring-wrap funny-profile-wrap">
+            <div class="profile-ring funny-profile-ring"></div>
+            <img src="assets/img/ProfileImage.jpg" alt="Akash Verma" class="funny-profile-img">
           </div>
           <p class="meme-badge">👆 Look at this highly hirable face 👆</p>
         </div>
@@ -114,13 +75,13 @@
   </section>
 
   <!-- ABOUT / STATS -->
-  <section id="about" style="padding-top: 2rem;">
+  <section id="about">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">The <span>Cold, Hard Facts</span></h2>
       </div>
 
-      <div class="about-stats" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="about-stats funny-stats">
         <div class="glass-card stat-card">
           <div class="stat-number">10,000+</div>
           <div class="stat-label">Google Searches for Syntax</div>
@@ -194,32 +155,32 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" style="padding-bottom: 5rem;">
+  <section id="experience">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">My "Professional" <span>Journey</span></h2>
       </div>
 
-      <div class="timeline" style="max-width: 800px; margin: auto;">
+      <div class="timeline funny-timeline">
 
-        <div class="timeline-item glass-card" style="margin-bottom: 2rem;">
+        <div class="timeline-item glass-card funny-timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-content" style="padding: 2rem;">
+          <div class="timeline-content funny-timeline-content">
             <h3>Intelliflo (Senior Developer)</h3>
             <span class="timeline-date">Nov 2023 - Present</span>
-            <p style="margin-top: 1rem; color: var(--text-secondary)">
+            <p class="funny-timeline-text">
               Currently pretending to know what Kubernetes is. I nod thoughtfully in architecture meetings and say
               things like "But does it scale?" or "Let's microservice that." They still haven't figured out my secret.
             </p>
           </div>
         </div>
 
-        <div class="timeline-item glass-card" style="margin-bottom: 2rem;">
+        <div class="timeline-item glass-card funny-timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-content" style="padding: 2rem;">
+          <div class="timeline-content funny-timeline-content">
             <h3>Publix Super Markets (Software Engineer)</h3>
             <span class="timeline-date">Feb 2021 - Sep 2023</span>
-            <p style="margin-top: 1rem; color: var(--text-secondary)">
+            <p class="funny-timeline-text">
               Built retail software. Did you know grocery stores have software? Well they do, and I wrote it in Angular.
               Fixed a bug once that accidentally made avocados free. (Okay, that's a lie, but it sounds cool).
             </p>
@@ -231,84 +192,179 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" style="padding-bottom: 5rem;">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">"Groundbreaking" <span>Projects</span></h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="glass-card project-card funny-project-card">
+        <div class="funny-project-icon-cyan"><i class="fa-solid fa-list-check"></i></div>
+        <h3 class="funny-project-title">A To-Do App</h3>
+        <p class="funny-text-sec">
+          I built a To-Do app to manage my life. It currently has 400 unfinished tasks, including 'finish this to-do
+          app'.
+          It has dark mode though, so it's enterprise-ready.
+        </p>
+      </article>
+
+      <article class="glass-card project-card funny-project-card">
+        <div class="funny-project-icon-violet"><i class="fa-solid fa-server"></i></div>
+        <h3 class="funny-project-title">Localhost:5000</h3>
+        <p class="funny-text-sec">
+          My magnum opus. It works perfectly on my machine. It's beautiful. It's flawless. If it breaks in production,
+          that's a DevOps problem, not mine.
+        </p>
+      </article>
+
+      <article class="glass-card project-card funny-project-card">
+        <div class="funny-project-icon-gold"><i class="fa-solid fa-folder-open"></i></div>
+        <h3 class="funny-project-title">Untitled Folder 4</h3>
+        <p class="funny-text-sec">
+          A revolutionary project containing files named 'final.js', 'final_real.js', 'please_work_god.js', and
+          'asdf.js'.
+          I'm too afraid to delete any of them.
+        </p>
+      </article>
+
+    </div>
+  </div>
+  <!-- DAILY ROUTINE -->
+  <section id="routine">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">"Groundbreaking" <span>Projects</span></h2>
+        <h2 class="section-title">My Typical <span>Daily Routine</span></h2>
       </div>
 
-      <div class="projects-grid" style="display:flex; flex-wrap:wrap; gap:1.75rem; justify-content:center;">
-        
-        <article class="glass-card project-card" style="flex:0 1 350px; padding: 2rem;">
-          <div style="font-size: 2.5rem; color: var(--accent-cyan); margin-bottom: 1rem;"><i class="fa-solid fa-list-check"></i></div>
-          <h3 style="margin-bottom: 1rem;">A To-Do App</h3>
-          <p style="color: var(--text-secondary);">
-            I built a To-Do app to manage my life. It currently has 400 unfinished tasks, including 'finish this to-do app'. 
-            It has dark mode though, so it's enterprise-ready.
-          </p>
+      <div class="projects-grid">
+        <article class="glass-card project-card funny-project-card">
+          <h3 class="funny-project-title" style="color: var(--accent-cyan);">09:00 AM</h3>
+          <p class="funny-text-sec">Wake up, reconsider my career choices, and convince myself that today is the day I
+            write clean code.</p>
         </article>
 
-        <article class="glass-card project-card" style="flex:0 1 350px; padding: 2rem;">
-          <div style="font-size: 2.5rem; color: var(--accent-violet); margin-bottom: 1rem;"><i class="fa-solid fa-server"></i></div>
-          <h3 style="margin-bottom: 1rem;">Localhost:5000</h3>
-          <p style="color: var(--text-secondary);">
-            My magnum opus. It works perfectly on my machine. It's beautiful. It's flawless. If it breaks in production, that's a DevOps problem, not mine.
-          </p>
+        <article class="glass-card project-card funny-project-card">
+          <h3 class="funny-project-title" style="color: var(--accent-violet);">11:30 AM</h3>
+          <p class="funny-text-sec">Stare intensely at the screen hoping the bug gets intimidated and fixes itself. (It
+            rarely works).</p>
         </article>
 
-        <article class="glass-card project-card" style="flex:0 1 350px; padding: 2rem;">
-          <div style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem;"><i class="fa-solid fa-folder-open"></i></div>
-          <h3 style="margin-bottom: 1rem;">Untitled Folder 4</h3>
-          <p style="color: var(--text-secondary);">
-            A revolutionary project containing files named 'final.js', 'final_real.js', 'please_work_god.js', and 'asdf.js'. 
-            I'm too afraid to delete any of them.
-          </p>
+        <article class="glass-card project-card funny-project-card">
+          <h3 class="funny-project-title" style="color: var(--accent-gold);">02:00 PM</h3>
+          <p class="funny-text-sec">Search StackOverflow for the exact same error I searched for yesterday. Upvote my
+            own question from 2021.</p>
         </article>
 
+        <article class="glass-card project-card funny-project-card">
+          <h3 class="funny-project-title" style="color: var(--accent-cyan);">04:30 PM</h3>
+          <p class="funny-text-sec">Write 5 lines of code. Delete 12 lines of code. Call it a highly productive day of
+            refactoring.</p>
+        </article>
+
+        <article class="glass-card project-card funny-project-card">
+          <h3 class="funny-project-title" style="color: var(--accent-violet);">11:00 PM</h3>
+          <p class="funny-text-sec">Tell myself I'll go to sleep early tonight. Close the laptop.</p>
+        </article>
+
+        <article class="glass-card project-card funny-project-card">
+          <h3 class="funny-project-title" style="color: var(--accent-gold);">03:00 AM</h3>
+          <p class="funny-text-sec">Wake up in a cold sweat. Finally figure out why the code was breaking (I missed a
+            comma on line 42).</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK TRANSLATED -->
+  <section id="tech-translation">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My Tech Stack <span>(Translated)</span></h2>
+      </div>
+
+      <div class="timeline funny-timeline">
+        <div class="timeline-item glass-card funny-timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content funny-timeline-content">
+            <h3>HTML / CSS</h3>
+            <p class="funny-timeline-text">Moving a button 2 pixels to the left for 4 hours until I start crying.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card funny-timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content funny-timeline-content">
+            <h3>JavaScript</h3>
+            <p class="funny-timeline-text">A magical realm where <code>0 == "0"</code> is true, but
+              <code>0 === "0"</code> is false, and <code>undefined is not a function</code>.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card funny-timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content funny-timeline-content">
+            <h3>Docker</h3>
+            <p class="funny-timeline-text">"It works on my machine" securely packaged into a digital box so it can fail
+              on your machine instead.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card funny-timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content funny-timeline-content">
+            <h3>Kubernetes</h3>
+            <p class="funny-timeline-text">10 Docker boxes inside a bigger box that is currently on fire, and nobody
+              knows how to turn it off.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials" style="padding-bottom: 5rem;">
+  <section id="testimonials">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Raving <span>Reviews</span></h2>
       </div>
 
-      <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
-        <div class="glass-card" style="padding:2rem; max-width: 350px; text-align:center;">
-          <div style="font-size:1.5rem; color:var(--accent-gold); margin-bottom:1rem;">★★★★★</div>
-          <p style="font-style:italic; margin-bottom:1rem; color:var(--text-secondary);">"He is definitely my son. I think he fixes computers?"</p>
-          <strong style="color:var(--text-primary);">— Mom</strong>
-        </div>
-        
-        <div class="glass-card" style="padding:2rem; max-width: 350px; text-align:center;">
-          <div style="font-size:1.5rem; color:var(--accent-gold); margin-bottom:1rem;">★★★★☆</div>
-          <p style="font-style:italic; margin-bottom:1rem; color:var(--text-secondary);">"Why does everything on this page say 'Hello World'?"</p>
-          <strong style="color:var(--text-primary);">— Confused Client</strong>
+      <div class="testimonials-grid">
+        <div class="glass-card funny-testimonial-card">
+          <div class="funny-rating">★★★★★</div>
+          <p class="funny-quote">"He is definitely my son. I think he fixes computers?"</p>
+          <strong class="funny-author">— Mom</strong>
         </div>
 
-        <div class="glass-card" style="padding:2rem; max-width: 350px; text-align:center;">
-          <div style="font-size:1.5rem; color:var(--accent-gold); margin-bottom:1rem;">★☆☆☆☆</div>
-          <p style="font-style:italic; margin-bottom:1rem; color:var(--text-secondary);">"Who pushed directly to master?! Akash!!!"</p>
-          <strong style="color:var(--text-primary);">— Former Team Lead</strong>
+        <div class="glass-card funny-testimonial-card">
+          <div class="funny-rating">★★★★☆</div>
+          <p class="funny-quote">"Why does everything on this page say 'Hello World'?"</p>
+          <strong class="funny-author">— Confused Client</strong>
+        </div>
+
+        <div class="glass-card funny-testimonial-card">
+          <div class="funny-rating">★☆☆☆☆</div>
+          <p class="funny-quote">"Who pushed directly to master?! Akash!!!"</p>
+          <strong class="funny-author">— Former Team Lead</strong>
         </div>
       </div>
     </div>
   </section>
-  <section id="hire" style="text-align: center; padding: 5rem 0; border-top: 1px solid var(--border-glass);">
+  <section id="hire" class="funny-hire-section">
     <div class="container">
       <h2 class="hire-me-pls">Please Hire Me. I have mechanical keyboards to feed.</h2>
-      <p style="margin: 2rem 0; color: var(--text-secondary); max-width: 600px; margin-inline: auto;">
+      <p class="funny-hire-desc">
         Look, you read this far. You're smiling (or judging me severely). Either way, I'm memorable. Let's write some
         awesome code together.
       </p>
-      <a href="mailto:engineer.akash.verma@gmail.com" class="btn-primary"
-        style="font-size: 1.2rem; padding: 1rem 3rem;">Email Me Before Someone Else Does</a>
+      <a href="mailto:engineer.akash.verma@gmail.com" class="btn-primary funny-hire-btn">Email Me Before Someone Else
+        Does</a>
     </div>
-  </section>
 
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Funny Page Script -->
+    <script src="assets/static/funny.js"></script>
 </body>
 
 </html>
