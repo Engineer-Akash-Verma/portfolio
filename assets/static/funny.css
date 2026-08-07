@@ -49,9 +49,18 @@
 }
 
 /* Extracted inline styles */
+.funny-nav-links {
+  gap: 1.5rem;
+}
+
 .funny-nav-cta {
   background: var(--accent-gold);
   color: var(--bg-primary);
+  white-space: nowrap;
+}
+
+.funny-nav-links .nav-link {
+  white-space: nowrap;
 }
 
 .typed-text-funny {
@@ -187,6 +196,9 @@
   #navbar .nav-links {
     position: static;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     width: auto;
     height: auto;
     padding: 0;
@@ -196,6 +208,11 @@
 
   #navbar .nav-cta {
     margin-top: 0;
+  }
+
+  .nav-logo {
+    white-space: normal;
+    text-align: center;
   }
 
   .hero-greeting {
