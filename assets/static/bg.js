@@ -113,7 +113,7 @@
   }
 
   function drawLines() {
-    ctx.lineWidth = 0.5;
+    ctx.lineWidth = 1;
 
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
