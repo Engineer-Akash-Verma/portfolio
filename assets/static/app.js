@@ -137,7 +137,8 @@
 
 
 // ── Footer year ─────────────────────────────────────────────
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ── Auto Calculate Experience ──────────────────────────────────
 (function initExperienceCalc() {
